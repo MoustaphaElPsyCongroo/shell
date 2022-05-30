@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#Display numbers from 1 to 20, with 
+# "bad luck from China" behind 4
+# "bad luck from Japan" behind 9
+# "bad luck from Italy" behind 17
 i=0
 
 while (( i < 20 ))
