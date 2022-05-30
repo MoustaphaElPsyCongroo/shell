@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Displays the content of the current directory in a list format, without extensions
+# Displays the content of the current directory in a list format, without the part before dashes
 for file in *
 do
-	printf "%s\n" "${file%.*}"
+	printf "%s\n" "${file#*-}"
 done
+
