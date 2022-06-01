@@ -9,10 +9,10 @@ sudo mv myscript.pid /var/run/
 
 while true
 do
+	trap "echo Y U no love me ?!" SIGINT
+	trap "sudo rm /var/run/myscript.pid; pkill -SIGKILL -f 10-process_and_pid_file" SIGQUIT
 	trap "echo 'I hate the kill command'; sudo rm /var/run/myscript.pid; pkill -SIGKILL -f 10-process_and_pid_file" SIGTERM
 
-	trap "sudo rm /var/run/myscript.pid; pkill -f 10-process_and_pid_file" SIGQUIT
-	trap "echo Y U no love me '?!'" SIGINT
-
+	sleep 2
 	echo "To infinity and beyond"
 done
