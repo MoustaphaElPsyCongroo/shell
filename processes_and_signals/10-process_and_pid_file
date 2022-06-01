@@ -10,8 +10,8 @@ sudo mv myscript.pid /var/run/
 while true
 do
 	trap "echo Y U no love me ?!" SIGINT
-	trap "sudo rm /var/run/myscript.pid; exit" SIGQUIT
 	trap "echo 'I hate the kill command'; sudo rm /var/run/myscript.pid; exit" SIGTERM
+	trap "sudo rm /var/run/myscript.pid; exit" SIGQUIT
 
 	echo "To infinity and beyond"
 done
