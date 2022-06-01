@@ -14,6 +14,5 @@ do
 	trap "echo Y U no love me '?!'" SIGINT
 	trap "sudo rm '/var/run/myscript.pid'; pkill -f 10-process_and_pid_file" SIGQUIT
 
-	sleep 2
 	echo "To infinity and beyond"
 done
