@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Init script to manage manage_my_process
 if [[ $1 = "start" ]]
 then
 	./manage_my_process &
